@@ -1,0 +1,156 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-boxs;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --PROFILEBLUE: #49A6EA;
+}
+
+body{
+    background-color: aliceblue;
+    display: grid;
+    justify-content: center;
+}
+
+.app{
+    width: 375px;
+    max-width: 375px;
+    height: 100vh;
+    /* border: 1px solid black; */
+
+}
+
+.title{
+    border: 0.1px solid transparent;
+}
+
+.title h2{
+    text-align: center;
+    margin: 50px 0 5px 0;
+    letter-spacing: 1.5px;
+}
+
+.title .underline{
+    width: 50px;
+    margin: 0 auto;
+    height: 3px;
+    background-color: var(--PROFILEBLUE);
+}
+
+.review{
+    background-color: white;
+    margin-top: 30px;   
+    border: 1px solid white;
+    position: relative;
+    width: 90%;
+    margin-inline: auto;
+    padding: 0 30px 20px;
+    box-shadow: 0px 0px 10px rgb(218, 217, 217);
+    border-radius: 10px;
+}
+
+.image-container{
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    position: relative;
+    margin: 20px auto 0;
+}
+
+.image-container::after{
+    content: "";
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    position: absolute;
+    background-color:  var(--PROFILEBLUE);
+    z-index: 1;
+    right: -4px;
+    top: -2px;
+}
+
+.image-container::before{
+    content: '"';
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    background-color: var(--PROFILEBLUE);
+    display: flex;
+    place-content: center;
+    color: white;
+    z-index: 3;
+    border-radius: 100%;
+    font-size: 1.5rem;
+    top: 0px;
+    font-size: 2rem;
+}
+
+.round{
+    width: 70px;
+    height: 70px;
+    /* border: 1px solid black;  */
+    border-radius: 100%;
+    position: absolute;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.image-container .round img{
+    width: 150%;
+    position: absolute;
+    right: -20px;
+}
+
+#author, #rank, #review{
+    text-align: center;
+}
+
+#author{
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+#rank{
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    margin-top: 3px;
+    font-weight: 500;
+    color: var(--PROFILEBLUE);
+    text-align: center;
+}
+
+#review{
+    font-size: 0.6rem;
+    margin-top: 10px;
+    line-height: 13px;
+    color: grey;
+}
+
+.buttons{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.prev, .next{
+    margin-bottom: 9px;
+    color: var(--PROFILEBLUE);
+    border: none;
+    padding: 3px;
+    font-size: 1.2rem;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.random{
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 0.7rem;
+    color: var(--PROFILEBLUE);
+    border: 2px solid var(--PROFILEBLUE);
+    background-color: transparent;
+    border-radius: 5px;
+}
